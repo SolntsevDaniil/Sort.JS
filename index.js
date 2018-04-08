@@ -107,4 +107,4 @@ console.log(ShakerSort([0, 4, 5, 2, 1, 8, 7, 9, 3, 6, 4, 9, 10, 15, 24, 30, 51, 
 console.timeEnd('Was sorted in:');
 
 
-}());
+})();
