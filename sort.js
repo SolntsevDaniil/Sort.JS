@@ -1,7 +1,5 @@
 (function(){
 
-console.time('Was sorted in:');
-
 
 /* --------- Bubble Sort ---------- */
 
@@ -22,8 +20,6 @@ function BubbleSort(array) {
 	};
 	return array;
 };
-
-console.log(BubbleSort([0, 4, 5, 2, 1, 8, 7, 9, 3, 6, 4, 9, 10, 15, 24, 30, 51, 8]));
 
 
 /* ---------- Selection Sort ---------- */
@@ -46,8 +42,6 @@ function SelectionSort(array) {
 	return array;
 };
 
-console.log(SelectionSort([0, 4, 5, 2, 1, 8, 7, 9, 3, 6, 4, 9, 10, 15, 24, 30, 51, 8]));
-
 
 /* --------- Insertion Sort ---------- */
 
@@ -64,8 +58,6 @@ function InsertionSort(array) {
 	};
 	return array;
 };
-
-console.log(InsertionSort([0, 4, 5, 2, 1, 8, 7, 9, 3, 6, 4, 9, 10, 15, 24, 30, 51, 8]));
 
 
 /* ---------- Shaker Sort ---------- */
@@ -102,9 +94,6 @@ function ShakerSort(array) {
 	};
 	return array;
 };
-
-console.log(ShakerSort([0, 4, 5, 2, 1, 8, 7, 9, 3, 6, 4, 9, 10, 15, 24, 30, 51, 8]));
-console.timeEnd('Was sorted in:');
 
 
 })();
