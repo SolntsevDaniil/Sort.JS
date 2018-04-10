@@ -1,99 +1,91 @@
-(function(){
-
-
+'use strict';
 /* --------- Bubble Sort ---------- */
 
-function BubbleSort(array) {
-	let len = array.length;
+Array.prototype.BubbleSort = function() {
+	let len = this.length;
 
 	for (let i = 0; i < len-1; i++) {
-
 		for (let j = 0; j < len-1-i; j++) {
-
-			if (array[j+1] < array[j]) {
-				let t = array[j+1]; 
-				array[j+1] = array[j];
-				array[j] = t;
+			if (this[j+1] < this[j]) {
+				let t = this[j+1];
+				this[j+1] = this[j];
+				this[j] = t;
 			};
-
 		};
 	};
-	return array;
+	return this;
 };
-
 
 /* ---------- Selection Sort ---------- */
 
-function SelectionSort(array) {
-	let len = array.length;
+Array.prototype.SelectionSort = function() {
+	let len = this.length;
 
 	for (let i = 0; i < len-1; i++) {
 		let min = i;
 
 		for (let j = i+1; j < len; j++) {
-			if (array[j] < array[min]){ min = j; };
+			if (this[j] < this[min]) {
+				min = j;
+			};
 		};
 
-	let t = array[min];
-	array[min] = array[i];
-	array[i] = t;
-
+	let t = this[min];
+	this[min] = this[i];
+	this[i] = t;
 	};
-	return array;
+	return this;
 };
-
 
 /* --------- Insertion Sort ---------- */
 
-function InsertionSort(array) {
-	let len = array.length;
+Array.prototype.InsertionSort = function() {
+	let len = this.length;
 
 	for (let i = 0; i < len; i++) {
-		let v = array[i], j = i-1;
-		while (j >= 0 && array[j] > v) {
-			array[j+1] = array[j];
+		let v = this[i],
+			j = i - 1;
+		
+		while (j >= 0 && this[j] > v) {
+			this[j+1] = this[j];
 			j--;
 		};
-		array[j+1] = v;
+		this[j+1] = v;
 	};
-	return array;
+	return this;
 };
-
 
 /* ---------- Shaker Sort ---------- */
 
-function ShakerSort(array) {
-	let i = 0, 
-		j = array.length-1, 
-		s = true, 
+Array.prototype.ShakerSort = function() {
+	let i = 0,
+		j = this.length - 1,
+		s = true,
 		t;
 
 	while (i < j && s) {
 		s = false;
 		for (let k = i; k < j; k++) {
-			if (array[k] > array[k+1]) {
-				t = array[k];
-				array[k] = array[k+1];
-				array[k+1] = t;
+			if (this[k] > this[k+1]) {
+				t = this[k];
+				this[k] = this[k+1];
+				this[k+1] = t;
 				s = true;
 			};
 		};
 		j--;
 		if (s) {
 			s = false;
-			for (var k = j; k > i; k--) {
-				if (array[k] < array[k-1]) {
-					t = array[k];
-					array[k] = array[k-1];
-					array[k-1] = t;
+			for (let k = j; k > i; k--) {
+				if (this[k] < thid[k-1]) {
+					t = this[k];
+					this[k] = this[k-1];
+					this[k-1] = t;
 					s = true;
 				};
 			};
 		};
 		i++;
 	};
-	return array;
+	return this;
 };
-
-
-})();
