@@ -1,5 +1,5 @@
 # Sort.js
-Small js-library made in prototype-oriented style that allows you to sort arrays in order from the smallest to  the largest value. Consist of 4 types of sorting functions. 
+Small js-library made in prototype-oriented style that allows you to sort arrays in order from the smallest to  the largest value. Consist of 4 types of sorting functions: Bubble Sort, Selction Sort, Insertion Sort and Shaker Sort. 
 
 
 ## Example
